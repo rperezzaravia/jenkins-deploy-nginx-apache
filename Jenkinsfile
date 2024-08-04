@@ -37,6 +37,13 @@ pipeline {
                 }       
             }   
         }
+        //Copy the application   
+        stage('Copy the web application to the container directory') {
+            steps {
+                echo 'Copying web application...'             
+                sh 'cp -r web/* /home/jenkins/app-web'
+            }
+        }
     }
 
     post {              

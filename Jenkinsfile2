@@ -17,7 +17,7 @@ pipeline {
                 stage('Drop apache container'){
                     steps {
                         echo 'droping the Apache container...'
-                        sh 'docker rm -f app-web-apache'
+                        sh 'ocker rm -f app-web-apache'
                     }
                 }
                 stage('Drop Nginx Container'){
